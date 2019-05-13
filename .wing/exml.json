@@ -6,5 +6,10 @@
   },
   "global": {
     "globalAutoLayerMarkEnable": true
+  },
+  "16ab1cab15e": {
+    "path": "components\\control\\ControlWhileNum.ts",
+    "class": "ControlWhileNum",
+    "parentPath": ""
   }
 }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ControlWhileNumSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="16ab1cab15e" ></w:Config>
+	<e:Image left="0" right="0" source="control_whilenum_png" scale9Grid="126,0,26,0"/>
+	<e:TextInput id="numInput" height="20" y="9" textColor="0x000000" left="120" right="80"/>
+</e:Skin>

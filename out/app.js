@@ -237,7 +237,7 @@ var Main = /** @class */ (function (_super) {
         var g = new eui.Group();
         g.layout = new eui.VerticalLayout();
         this.addChild(g);
-        [EventStart, ControlWhileTrue].forEach(function (v) {
+        [EventStart, ControlWhileTrue, ControlWhileNum].forEach(function (v) {
             var es = new v();
             g.addChild(es);
         });
@@ -338,6 +338,24 @@ var ThemeAdapter = /** @class */ (function () {
     };
     return ThemeAdapter;
 }());
+/**
+ * 有限次数的 while 循环
+ */
+var ControlWhileNum = /** @class */ (function (_super) {
+    __extends(ControlWhileNum, _super);
+    function ControlWhileNum() {
+        var _this = _super.call(this) || this;
+        _this.skinName = "ControlWhileNumSkin";
+        return _this;
+    }
+    ControlWhileNum.prototype.partAdded = function (partName, instance) {
+        _super.prototype.partAdded.call(this, partName, instance);
+    };
+    ControlWhileNum.prototype.childrenCreated = function () {
+        _super.prototype.childrenCreated.call(this);
+    };
+    return ControlWhileNum;
+}(eui.Component));
 /**
  * while true循环
  *

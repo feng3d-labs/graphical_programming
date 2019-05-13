@@ -79,7 +79,7 @@ class Main extends eui.UILayer
         g.layout = new eui.VerticalLayout();
         this.addChild(g);
 
-        [EventStart, ControlWhileTrue].forEach(v =>
+        [EventStart, ControlWhileTrue, ControlWhileNum].forEach(v =>
         {
             let es = new v();
             g.addChild(es);

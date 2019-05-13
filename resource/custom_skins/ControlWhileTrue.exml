@@ -2,5 +2,5 @@
 <e:Skin class="ControlWhileTrueSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="16ab18ab919" ></w:Config>
 	<e:Image source="control_whiletrue_png" scale9Grid="107,0,4,0" left="0" right="0"/>
-	<e:Label id="label" text="重复执行" left="39" verticalCenter="-31" size="18" right="40"/>
+	<e:Label id="label" text="重复执行" left="39" size="18" right="40" y="11"/>
 </e:Skin>
