@@ -234,8 +234,13 @@ var Main = /** @class */ (function (_super) {
      * Create scene interface
      */
     Main.prototype.createGameScene = function () {
-        var es = new EventStart();
-        this.addChild(es);
+        var g = new eui.Group();
+        g.layout = new eui.VerticalLayout();
+        this.addChild(g);
+        [EventStart, ControlWhileTrue].forEach(function (v) {
+            var es = new v();
+            g.addChild(es);
+        });
     };
     return Main;
 }(eui.UILayer));
@@ -333,6 +338,26 @@ var ThemeAdapter = /** @class */ (function () {
     };
     return ThemeAdapter;
 }());
+/**
+ * while true循环
+ *
+ * while (true) { }
+ */
+var ControlWhileTrue = /** @class */ (function (_super) {
+    __extends(ControlWhileTrue, _super);
+    function ControlWhileTrue() {
+        var _this = _super.call(this) || this;
+        _this.skinName = "ControlWhileTrueSkin";
+        return _this;
+    }
+    ControlWhileTrue.prototype.partAdded = function (partName, instance) {
+        _super.prototype.partAdded.call(this, partName, instance);
+    };
+    ControlWhileTrue.prototype.childrenCreated = function () {
+        _super.prototype.childrenCreated.call(this);
+    };
+    return ControlWhileTrue;
+}(eui.Component));
 /**
  * 事件起始
  */

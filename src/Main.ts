@@ -75,7 +75,14 @@ class Main extends eui.UILayer
      */
     protected createGameScene(): void
     {
-        let es = new EventStart();
-        this.addChild(es);
+        var g = new eui.Group();
+        g.layout = new eui.VerticalLayout();
+        this.addChild(g);
+
+        [EventStart, ControlWhileTrue].forEach(v =>
+        {
+            let es = new v();
+            g.addChild(es);
+        });
     }
 }
