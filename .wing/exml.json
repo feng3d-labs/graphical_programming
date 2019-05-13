@@ -1,0 +1,10 @@
+{
+  "16ab04fe850": {
+    "path": "components\\events\\EventStart.ts",
+    "class": "EventStart",
+    "parentPath": ""
+  },
+  "global": {
+    "globalAutoLayerMarkEnable": true
+  }
+}

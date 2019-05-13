@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EventStartSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing"  minWidth="80">
+	<w:Config id="16ab04fe850" ></w:Config>
+	<e:Image scale9Grid="58,0,3,0" scaleX="1" scaleY="1" left="0" right="0" source="event_begin_up_png"/>
+	<e:Label id="label" text="当 开始 被点击" left="61" right="17" verticalCenter="0" size="18"/>
+	<e:Image id="icon" scale9Grid="58,0,3,0" scaleX="1" scaleY="1" source="event_start_png"/>
+</e:Skin>
