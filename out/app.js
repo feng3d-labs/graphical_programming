@@ -339,8 +339,9 @@ var ThemeAdapter = /** @class */ (function () {
 var EventStart = /** @class */ (function (_super) {
     __extends(EventStart, _super);
     function EventStart() {
-        return _super.call(this) || this;
-        // this.skinName = "EventStart";
+        var _this = _super.call(this) || this;
+        _this.skinName = "EventStartSkin";
+        return _this;
     }
     EventStart.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);

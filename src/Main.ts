@@ -1,18 +1,21 @@
-class Main extends eui.UILayer {
-
-
-    protected createChildren(): void {
+class Main extends eui.UILayer
+{
+    protected createChildren(): void
+    {
         super.createChildren();
 
-        egret.lifecycle.addLifecycleListener((context) => {
+        egret.lifecycle.addLifecycleListener((context) =>
+        {
             // custom lifecycle plugin
         })
 
-        egret.lifecycle.onPause = () => {
+        egret.lifecycle.onPause = () =>
+        {
             egret.ticker.pause();
         }
 
-        egret.lifecycle.onResume = () => {
+        egret.lifecycle.onResume = () =>
+        {
             egret.ticker.resume();
         }
 
@@ -23,18 +26,22 @@ class Main extends eui.UILayer {
         egret.registerImplementation("eui.IThemeAdapter", new ThemeAdapter());
 
 
-        this.runGame().catch(e => {
+        this.runGame().catch(e =>
+        {
             console.log(e);
         })
     }
 
-    private async runGame() {
+    private async runGame()
+    {
         await this.loadResource()
         this.createGameScene();
     }
 
-    private async loadResource() {
-        try {
+    private async loadResource()
+    {
+        try
+        {
             const loadingView = new LoadingUI();
             this.stage.addChild(loadingView);
             await RES.loadConfig("resource/default.res.json", "resource/");
@@ -42,20 +49,23 @@ class Main extends eui.UILayer {
             await RES.loadGroup("preload", 0, loadingView);
             this.stage.removeChild(loadingView);
         }
-        catch (e) {
+        catch (e)
+        {
             console.error(e);
         }
     }
 
-    private loadTheme() {
-        return new Promise((resolve, reject) => {
+    private loadTheme()
+    {
+        return new Promise((resolve, reject) =>
+        {
             // load skin theme configuration file, you can manually modify the file. And replace the default skin.
             //加载皮肤主题配置文件,可以手动修改这个文件。替换默认皮肤。
             let theme = new eui.Theme("resource/default.thm.json", this.stage);
-            theme.addEventListener(eui.UIEvent.COMPLETE, () => {
+            theme.addEventListener(eui.UIEvent.COMPLETE, () =>
+            {
                 resolve();
             }, this);
-
         })
     }
 
@@ -63,8 +73,8 @@ class Main extends eui.UILayer {
      * 创建场景界面
      * Create scene interface
      */
-    protected createGameScene(): void {
-
+    protected createGameScene(): void
+    {
         let es = new EventStart();
         this.addChild(es);
     }
