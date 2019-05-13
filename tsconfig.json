@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "outDir": "bin-debug",
+        "outFile": "out/app.js",
+        "sourceMap": true,
         "experimentalDecorators": true,
         "lib": [
             "es5",
