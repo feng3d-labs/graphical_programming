@@ -6,6 +6,7 @@ class EventStart extends eui.Component implements eui.UIComponent
 	public constructor()
 	{
 		super();
+		// this.skinName = "EventStart";
 	}
 
 	protected partAdded(partName: string, instance: any): void
